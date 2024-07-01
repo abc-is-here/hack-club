@@ -23,4 +23,7 @@ com_src = ttk.Combobox(frame, values = list_txt)
 com_src.place(x = 10, y = 350, height=40, width=90)
 com_src.set("English")
 
+button_change = Button(frame, text = "Translate", relief=RAISED)
+button_change.place(x = 120, y = 350, height=40, width=90)
+
 root.mainloop()

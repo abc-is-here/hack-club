@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sphere clicks</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <a-scene>
+        <a-entity camera look-controls cursor="rayOrigin: mouse;"></a-entity>
+
+        <a-text id="score" value="Score: 0" position="-2 3 -5" color="#333"></a-text>
+
+        <a-entity id="targets"></a-entity>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+
+    <script src="script.js"></script>
+</body>
+</html>

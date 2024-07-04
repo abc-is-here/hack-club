@@ -1,8 +1,9 @@
 const scene = document.querySelector('a-scene');
+const backgroundElements = document.getElementById('background-elements');
 let score = 0;
 let timeLeft = 30;
 let timerInterval;
-let isGameRunning = true;
+let isGameRunning = false;
 
 function createTarget() {
     const positionX = Math.random() * 10 - 5;
@@ -16,6 +17,8 @@ function createTarget() {
     target.setAttribute('color', '#FF0000');
     target.setAttribute('material', 'emissive: #808080; emissiveIntensity: 1');
 
+    target.setAttribute('animation', 'property: scale; to: 2 2 2; dur: 1000; easing: easeInOutQuad');
+
     target.addEventListener('click', function() {
         score++;
         updateScore();
@@ -26,7 +29,7 @@ function createTarget() {
         if (target.parentNode) {
             target.parentNode.removeChild(target);
         }
-    }, 1000);
+    }, 900);
 
     scene.appendChild(target);
 }
@@ -43,11 +46,13 @@ function spawnTargets() {
 function updateScore() {
     const scoreElement = document.getElementById('score');
     scoreElement.setAttribute('value', `Score: ${score}`);
+    scoreElement.setAttribute('visible', true);
 }
 
 function updateTimer() {
     const timerElement = document.getElementById('timer');
     timerElement.setAttribute('value', `Time: ${timeLeft}`);
+    timerElement.setAttribute('visible', true);
     timeLeft--;
 
     if (timeLeft < 0) {
@@ -58,7 +63,22 @@ function updateTimer() {
 function endGame() {
     isGameRunning = false;
     clearInterval(timerInterval);
-    alert(`Game Over! Your score is ${score}`);
+    document.getElementById('end-screen').style.display = 'flex';
+    document.getElementById('final-score').innerText = `Your score is ${score}`;
+}
+
+
+function restartGame() {
+    score = 0;
+    timeLeft = 30;
+    isGameRunning = true;
+    updateScore();
+    updateTimer();
+
+    document.getElementById('end-screen').style.display = 'none';
+
+    timerInterval = setInterval(updateTimer, 1000);
+    spawnTargets();
 }
 
 function startGame() {
@@ -67,4 +87,36 @@ function startGame() {
     spawnTargets();
 }
 
-startGame();
+
+function createBackgroundElements() {
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A8'];
+    for (let i = 0; i < 50; i++) {
+        const cube = document.createElement('a-box');
+        const positionX = Math.random() * 20 - 10;
+        const positionY = Math.random() * 10 - 5;
+        const positionZ = Math.random() * -20 - 10;
+        const size = Math.random() * 0.5 + 0.2;
+
+        cube.setAttribute('position', `${positionX} ${positionY} ${positionZ}`);
+        cube.setAttribute('scale', `${size} ${size} ${size}`);
+        cube.setAttribute('color', colors[Math.floor(Math.random() * colors.length)]);
+
+        cube.setAttribute('animation', {
+            property: 'rotation',
+            to: `${Math.random() * 360} ${Math.random() * 360} ${Math.random() * 360}`,
+            loop: true,
+            dur: 10000
+        });
+
+        backgroundElements.appendChild(cube);
+    }
+}
+
+document.getElementById('start-button').addEventListener('click', () => {
+    document.getElementById('start-screen').style.display = 'none';
+    startGame();
+});
+
+document.getElementById('restart-button').addEventListener('click', restartGame);
+
+createBackgroundElements();

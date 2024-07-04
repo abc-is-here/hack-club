@@ -1,8 +1,8 @@
 const scene = document.querySelector('a-scene');
 let score = 0;
 let timeLeft = 30;
-let gameInterval;
 let timerInterval;
+let isGameRunning = true;
 
 function createTarget() {
     const positionX = Math.random() * 10 - 5;
@@ -13,7 +13,8 @@ function createTarget() {
     target.setAttribute('class', 'target');
     target.setAttribute('position', `${positionX} ${positionY} ${positionZ}`);
     target.setAttribute('radius', '0.5');
-    target.setAttribute('color', '#FFC65D');
+    target.setAttribute('color', '#FF0000');
+    target.setAttribute('material', 'emissive: #808080; emissiveIntensity: 1');
 
     target.addEventListener('click', function() {
         score++;
@@ -28,6 +29,15 @@ function createTarget() {
     }, 1000);
 
     scene.appendChild(target);
+}
+
+function spawnTargets() {
+    if (!isGameRunning) return;
+
+    createTarget();
+    const randomTime = Math.random() * 1000 + 500;
+
+    setTimeout(spawnTargets, randomTime);
 }
 
 function updateScore() {
@@ -46,14 +56,15 @@ function updateTimer() {
 }
 
 function endGame() {
-    clearInterval(gameInterval);
+    isGameRunning = false;
     clearInterval(timerInterval);
     alert(`Game Over! Your score is ${score}`);
 }
 
 function startGame() {
-    gameInterval = setInterval(createTarget, 1000);
+    isGameRunning = true;
     timerInterval = setInterval(updateTimer, 1000);
+    spawnTargets();
 }
 
 startGame();

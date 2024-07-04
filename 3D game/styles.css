@@ -1,6 +1,44 @@
 body {
     margin: 0;
     overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.start-content {
+    text-align: center;
+    color: #FFF;
+}
+
+.start-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: #FFC65D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-button:hover {
+    background-color: #FFA726;
 }
 
 a-scene {
@@ -10,4 +48,17 @@ a-scene {
 
 .target {
     cursor: pointer;
+    animation: glow 1.5s infinite;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
 }

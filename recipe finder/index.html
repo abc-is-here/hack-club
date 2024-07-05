@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Finder</h1>
+        <label for="ingredients" class="visually-hidden">Enter ingredient</label>
+        <input type="text" id="ingredients" aria-label="Enter ingredients (comma separated)" placeholder="Enter ingredient">
+        <button id="search" aria-label="Find Recipes">Find Recipes</button>
+        <div id="recipes" aria-live="polite"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

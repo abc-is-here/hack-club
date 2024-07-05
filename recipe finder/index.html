@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Finder</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Recipe Finder</h1>
+      <button id="theme-toggle" aria-label="Toggle light/dark mode">
+        Switch to Dark Mode
+      </button>
+    </div>
     <div class="container">
-        <h1>Recipe Finder</h1>
-        <label for="ingredients" class="visually-hidden">Enter ingredient</label>
-        <input type="text" id="ingredients" aria-label="Enter ingredients (comma separated)" placeholder="Enter ingredient">
-        <button id="search" aria-label="Find Recipes">Find Recipes</button>
-        <div id="recipes" aria-live="polite"></div>
+      <label for="ingredients" class="visually-hidden"
+        >Enter ingredients (comma separated)</label
+      >
+      <input
+        type="text"
+        id="ingredients"
+        aria-label="Enter ingredients (comma separated)"
+        placeholder="Enter ingredients (comma separated)"
+      />
+      <button id="search" aria-label="Find Recipes">Find Recipes</button>
+      <div id="recipes" aria-live="polite"></div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

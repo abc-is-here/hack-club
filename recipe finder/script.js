@@ -17,8 +17,6 @@ async function fetchRecipes(ingredients) {
             displayRecipes([]);
             return;
         }
-
-        // Find common recipes
         let commonRecipes = allMeals[0];
         for (let i = 1; i < allMeals.length; i++) {
             commonRecipes = commonRecipes.filter(recipe1 => 

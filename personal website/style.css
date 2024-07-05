@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.div {
+  background-color: #fbec5d;
+  display: flex;
+  padding-top: 26px;
+  flex-direction: column;
+}
+.div-2 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 31px;
+}
+.div-3 {
+  align-self: stretch;
+}
+.div-4 {
+  gap: 20px;
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 35%;
+  margin-left: 0px;
+}
+
+.img {
+  aspect-ratio: 0.92;
+  object-fit: auto;
+  object-position: center;
+  width: 100%;
+  flex-grow: 1;
+}
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 65%;
+  margin-left: 20px;
+}
+
+.div-5 {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  color: #814500;
+  font-weight: 400;
+  margin: auto 0;
+}
+
+.div-6 {
+  -webkit-text-stroke-width: 6;
+  -webkit-text-stroke-color: #814500;
+  border-color: rgba(129, 69, 0, 1);
+  border-style: solid;
+  border-width: 6px;
+  border-radius: 50px;
+  background-color: #55330a;
+  color: #fbec5d;
+  padding: 19px 15px 36px;
+  font: 128px Jim Nightshade, sans-serif;
+}
+
+.div-7 {
+  margin-top: 45px;
+  font: 96px Elsie Swash Caps, sans-serif;
+}
+
+.div-8 {
+  margin-top: 27px;
+  font: 48px Fredericka the Great, -apple-system, Roboto, Helvetica, sans-serif;
+}

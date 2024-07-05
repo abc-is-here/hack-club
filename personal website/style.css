@@ -10,6 +10,13 @@
   padding-top: 26px;
   flex-direction: column;
 }
+
+#my:hover{
+  background-color: pink;
+  transition: transform 0.5s;
+  transition: 0.5s;
+}
+
 .div-2 {
   display: flex;
   width: 100%;
@@ -17,12 +24,30 @@
   align-items: start;
   padding: 0 31px;
 }
+@media (max-width: 991px) {
+  .div-2 {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
 .div-3 {
   align-self: stretch;
+}
+@media (max-width: 991px) {
+  .div-3 {
+    max-width: 100%;
+  }
 }
 .div-4 {
   gap: 20px;
   display: flex;
+}
+@media (max-width: 991px) {
+  .div-4 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
 }
 .column {
   display: flex;
@@ -31,13 +56,23 @@
   width: 35%;
   margin-left: 0px;
 }
-
+@media (max-width: 991px) {
+  .column {
+    width: 100%;
+  }
+}
 .img {
   aspect-ratio: 0.92;
   object-fit: auto;
   object-position: center;
   width: 100%;
   flex-grow: 1;
+}
+@media (max-width: 991px) {
+  .img {
+    max-width: 100%;
+    margin-top: 40px;
+  }
 }
 .column-2 {
   display: flex;
@@ -46,7 +81,11 @@
   width: 65%;
   margin-left: 20px;
 }
-
+@media (max-width: 991px) {
+  .column-2 {
+    width: 100%;
+  }
+}
 .div-5 {
   display: flex;
   flex-direction: column;
@@ -55,9 +94,14 @@
   font-weight: 400;
   margin: auto 0;
 }
-
+@media (max-width: 991px) {
+  .div-5 {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
 .div-6 {
-  -webkit-text-stroke-width: 6;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #814500;
   border-color: rgba(129, 69, 0, 1);
   border-style: solid;
@@ -65,16 +109,345 @@
   border-radius: 50px;
   background-color: #55330a;
   color: #fbec5d;
-  padding: 19px 15px 36px;
   font: 128px Jim Nightshade, sans-serif;
 }
-
+@media (max-width: 991px) {
+  .div-6 {
+    max-width: 100%;
+    font-size: 40px;
+    padding-right: 28px;
+  }
+}
 .div-7 {
   margin-top: 45px;
   font: 96px Elsie Swash Caps, sans-serif;
 }
-
+@media (max-width: 991px) {
+  .div-7 {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 40px;
+  }
+}
 .div-8 {
   margin-top: 27px;
   font: 48px Fredericka the Great, -apple-system, Roboto, Helvetica, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-8 {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+.div-9 {
+  color: #000;
+  margin: 24px 0 0 11px;
+  font: 400 48px Fredericka the Great, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-9 {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+.div-10 {
+  align-self: center;
+  margin-top: 25px;
+  width: 100%;
+  max-width: 1311px;
+}
+@media (max-width: 991px) {
+  .div-10 {
+    max-width: 100%;
+  }
+}
+.div-11 {
+  gap: 20px;
+  display: flex;
+}
+@media (max-width: 991px) {
+  .div-11 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+}
+.column-3 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 20%;
+  margin-left: 0px;
+}
+@media (max-width: 991px) {
+  .column-3 {
+    width: 100%;
+  }
+}
+.div-12 {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  font-size: 32px;
+  color: #000;
+  font-weight: 400;
+}
+@media (max-width: 991px) {
+  .div-12 {
+    margin-top: 36px;
+  }
+}
+.img-2 {
+  aspect-ratio: 1.18;
+  object-fit: auto;
+  object-position: center;
+  width: 100%;
+}
+.div-13 {
+  font-family: Fredericka the Great, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  margin-top: 29px;
+}
+.column-4 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 22%;
+  margin-left: 20px;
+}
+@media (max-width: 991px) {
+  .column-4 {
+    width: 100%;
+  }
+}
+.div-14 {
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  color: #000;
+  font-weight: 400;
+  white-space: nowrap;
+}
+@media (max-width: 991px) {
+  .div-14 {
+    margin-top: 36px;
+    white-space: initial;
+  }
+}
+.img-3 {
+  aspect-ratio: 1.27;
+  object-fit: auto;
+  object-position: center;
+  width: 100%;
+}
+.div-15 {
+  font-family: Fredericka the Great, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  align-self: center;
+  margin-top: 32px;
+}
+.column-5 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 22%;
+  margin-left: 20px;
+}
+@media (max-width: 991px) {
+  .column-5 {
+    width: 100%;
+  }
+}
+.div-16 {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  font-size: 32px;
+  color: #000;
+  font-weight: 400;
+}
+@media (max-width: 991px) {
+  .div-16 {
+    margin-top: 36px;
+  }
+}
+.img-4 {
+  aspect-ratio: 1.27;
+  object-fit: auto;
+  object-position: center;
+  width: 100%;
+}
+.div-17 {
+  font-family: Fredericka the Great, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  align-self: center;
+  margin-top: 32px;
+}
+.column-6 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 35%;
+  margin-left: 20px;
+}
+@media (max-width: 991px) {
+  .column-6 {
+    width: 100%;
+  }
+}
+.div-18 {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  font-size: 32px;
+  color: #000;
+  font-weight: 400;
+}
+@media (max-width: 991px) {
+  .div-18 {
+    max-width: 100%;
+    margin-top: 36px;
+  }
+}
+.img-5 {
+  aspect-ratio: 2;
+  object-fit: auto;
+  object-position: center;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .img-5 {
+    max-width: 100%;
+  }
+}
+.div-19 {
+  font-family: Fredericka the Great, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  margin-top: 32px;
+}
+@media (max-width: 991px) {
+  .div-19 {
+    max-width: 100%;
+  }
+}
+.div-20 {
+  color: #000;
+  margin: 39px 0 0 21px;
+  font: 400 48px Fredericka the Great, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-20 {
+    margin-left: 10px;
+    font-size: 40px;
+  }
+}
+.div-21 {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 25px 0 0 20px;
+}
+@media (max-width: 991px) {
+  .div-21 {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.img-6 {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 235px;
+  max-width: 100%;
+}
+.img-7 {
+  aspect-ratio: 0.9;
+  object-fit: auto;
+  object-position: center;
+  width: 212px;
+  max-width: 100%;
+}
+.img-8 {
+  aspect-ratio: 0.89;
+  object-fit: auto;
+  object-position: center;
+  width: 209px;
+  max-width: 100%;
+}
+.img-9 {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 235px;
+  max-width: 100%;
+}
+.img-10 {
+  aspect-ratio: 0.96;
+  object-fit: auto;
+  object-position: center;
+  width: 227px;
+  max-width: 100%;
+}
+.div-22 {
+  color: #000;
+  margin: 73px 0 0 11px;
+  font: 400 48px Fredericka the Great, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-22 {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 40px;
+  }
+}
+.div-23 {
+  background-color: #814500;
+  display: flex;
+  margin-top: 34px;
+  width: 100%;
+  gap: 20px;
+  font-size: 48px;
+  color: #fbec5d;
+  font-weight: 400;
+  padding: 26px 43px;
+}
+@media (max-width: 991px) {
+  .div-23 {
+    max-width: 100%;
+    flex-wrap: wrap;
+    font-size: 40px;
+    padding: 0 20px;
+  }
+}
+.div-24 {
+  font-family: Fredericka the Great, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+@media (max-width: 991px) {
+  .div-24 {
+    font-size: 40px;
+  }
+}
+.div-25 {
+  font-family: Fredericka the Great, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  align-self: start;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+@media (max-width: 991px) {
+  .div-25 {
+    font-size: 40px;
+  }
+}
+
+img:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  transition: 0.5s;
 }
